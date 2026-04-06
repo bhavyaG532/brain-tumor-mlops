@@ -1,0 +1,11 @@
+tensorflow
+fastapi
+uvicorn
+pillow
+numpy
+matplotlib
+seaborn
+scikit-learn
+tf2onnx
+onnxruntime
+prometheus-fastapi-instrumentator
