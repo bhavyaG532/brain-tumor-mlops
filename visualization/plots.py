@@ -19,9 +19,15 @@ for label in ["yes", "no"]:
     for file in os.listdir(folder):
         path = os.path.join(folder, file)
 
-        img = Image.open(path).resize((224,224))
-        img = np.array(img)/255.0
-        img = np.expand_dims(img, axis=0)
+       img = Image.open(path).convert("RGB").resize((224,224))
+       img = np.array(img, dtype=np.float32) / 255.0
+
+       # Ensure shape is correct
+       if img.shape != (224, 224, 3):
+           continue
+
+       img = np.expand_dims(img, axis=0)
+       img = tf.convert_to_tensor(img)
 
         pred = model.predict(img)[0][0]
 
