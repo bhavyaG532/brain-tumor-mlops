@@ -6,6 +6,8 @@ import tensorflow as tf
 
 app = FastAPI()
 
+Instrumentator().instrument(app).expose(app)
+
 model = tf.keras.models.load_model("model.h5")
 
 @app.post("/predict")
