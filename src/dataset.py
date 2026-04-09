@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 IMG_SIZE = (224, 224)
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 
 def load_data(data_dir):
     train = tf.keras.preprocessing.image_dataset_from_directory(
