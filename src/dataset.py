@@ -21,5 +21,7 @@ def load_data(data_dir):
         image_size=IMG_SIZE,
         batch_size=BATCH_SIZE
     )
-
+    train = train.map(lambda x, y: (x / 255.0, y))
+    val = val.map(lambda x, y: (x / 255.0, y))
+    
     return train, val
