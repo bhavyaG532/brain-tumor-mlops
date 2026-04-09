@@ -30,7 +30,14 @@ def predict(file: UploadFile):
 
     pred = model.predict(img)[0][0]
 
-    return {
-        "prediction": "Tumor" if pred > 0.5 else "No Tumor",
-        "confidence": float(pred)
-    }
+    if pred > 0.5:
+    result = "Tumor"
+    confidence = pred
+else:
+    result = "No Tumor"
+    confidence = 1 - pred
+
+return {
+    "prediction": result,
+    "confidence": float(round(confidence, 2))
+}
