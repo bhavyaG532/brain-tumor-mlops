@@ -3,6 +3,8 @@ from model import build_model
 
 train, val = load_data("data/")
 
+print("Classes:", train.class_names)
+
 model = build_model()
 
 model.compile(
