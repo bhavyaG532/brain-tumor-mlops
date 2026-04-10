@@ -39,5 +39,5 @@ else:
 
 return {
     "prediction": result,
-    "confidence": float(round(confidence, 2))
+    "confidence": float(confidence)
 }
