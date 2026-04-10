@@ -27,3 +27,20 @@ mlops-project/
 │
 ├── requirements.txt
 ├── README.md
+
+
+1. Data Collection / Input
+        ↓
+2. Data Processing (src/)
+        ↓
+3. Model Training (src/)
+        ↓
+4. Evaluation (Results/confusion_matrix)
+        ↓
+5. Inference (inference/)
+        ↓
+6. API Deployment (api/)
+        ↓
+7. Monitoring (monitoring/)
+        ↓
+8. Containerization (docker/, docker-compose.yml)
