@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 # 1. Load data
 train, val = load_data("data/")
 
+print("Classes:", train.class_names)     # already added
+print("Train batches:", len(train))      # ✅ add this
+print("Val batches:", len(val))
+
 # 2. Build model
 model = build_model()
 
